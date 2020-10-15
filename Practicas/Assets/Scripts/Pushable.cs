@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Pushable : Interactable
 {
-    public Vector3 direction;
+    Rigidbody rb;
+    public float pushForce;
+
     public override void Interact()
     {
         Debug.Log("Object pushed");
-        this.GetComponent<Rigidbody>().AddForce(Vector3.forward * 1000.0f, ForceMode.Force);
+        rb = GetComponent<Rigidbody>();
+        rb.AddForce(Vector3.forward * pushForce);
     }
 
     void Update()
