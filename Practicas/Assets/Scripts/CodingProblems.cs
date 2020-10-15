@@ -7,22 +7,19 @@ public class CodingProblems : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string[] student = new string[5];
-        student[0] = "Andrade Aldair";
-        student[1] = "Banuelos Ricardo";
-        student[2] = "Cazares Paulo";
-        student[3] = "Deidad Diana";
-        student[4] = "Esparza Pablo";
-
-        if(checkStudent(student,"Andrade Aldair")){
-            Debug.Log("Inscrito");
-        }
-        else{
-            Debug.Log("No inscrito");
-        }
+        
     }
 
-    /*public int[] smallerNumberCounter(int[] nums){
+    public int[] SumaDos(int[], int target)
+    {
+        int[] values = new int[2];
+
+        
+
+        return values;
+    }
+
+    public int[] smallerNumberCounter(int[] nums){
         int[] output = new int[nums.Length];
         int counter;
         for(int i = 0; i < nums.Length; i++){
@@ -34,7 +31,7 @@ public class CodingProblems : MonoBehaviour
             output[i] = counter;
         }
         return output;
-    }*/
+    }
 
     public bool checkStudent(string[] students, string student){
         int izquierda = 0;
