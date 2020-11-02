@@ -2,8 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpCoin : Interactable
+public class Pickable : Interactable
 {
+
+    public KeyCode keyCode;
+
+    void Start()
+    {
+        
+    }
     public override void Interact()
     {
         Debug.Log("Coin collected.");
@@ -12,7 +19,7 @@ public class PickUpCoin : Interactable
 
     void Update()
     {
-        if(inZone && Input.GetKeyDown(KeyCode.C))
+        if(inZone && Input.GetKeyDown(keyCode))
             Interact();
     }
 }
