@@ -10,7 +10,13 @@ public class Inventory : MonoBehaviour
 
     public void Start()
     {
-        
+        inventoryUI.gameObject.SetActive(false);
+    }
+
+    public void Update(){
+        if(Input.GetKeyDown(KeyCode.I)){
+            inventoryUI.gameObject.SetActive(!inventoryUI.gameObject.activeSelf);
+        }
     }
 
     public void GiveItem(int id){

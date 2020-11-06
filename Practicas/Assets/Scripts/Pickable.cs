@@ -6,6 +6,8 @@ public class Pickable : Interactable
 {
 
     public KeyCode keyCode;
+    public int id;
+    public Inventory inventory;
 
     void Start()
     {
@@ -13,7 +15,7 @@ public class Pickable : Interactable
     }
     public override void Interact()
     {
-        Debug.Log("Coin collected.");
+        inventory.GiveItem(id);
         Object.Destroy(this.gameObject);
     }
 
