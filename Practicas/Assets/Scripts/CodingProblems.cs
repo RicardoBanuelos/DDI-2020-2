@@ -7,13 +7,25 @@ public class CodingProblems : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+       int[] array = {1, 3, 5 ,7 , 9, 2};
+       int pares = countNumPar(array);
+       Debug.Log(pares);
     }
 
-   /* public int countNumPar(int[] array){
-        int contador;
+    public int countNumPar(int[] array){
+        int contador = 0;
+        for(int i = 0; i < array.Length; i++){
+            int temp = array[i];
+            int esPar = 0;
+            while(temp > 0){
+                temp /= 10;
+                esPar++;
+            }
+            if((esPar%2) == 0)
+                contador++;
+        }
         return contador;
-    }*/
+    }
 
     public int[] SumaDos(int[] nums, int target)
     {
