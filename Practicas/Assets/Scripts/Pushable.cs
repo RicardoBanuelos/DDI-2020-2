@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Pushable : Interactable
 {
@@ -16,7 +17,7 @@ public class Pushable : Interactable
 
     void Update()
     {
-        if(inZone && Input.GetKeyDown(KeyCode.Q))
+        if(inZone && CrossPlatformInputManager.GetButtonDown("Push"))
         {
             Interact();
         }

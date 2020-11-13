@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Scaleable : Interactable
 {
@@ -20,12 +21,12 @@ public class Scaleable : Interactable
     {
         if(inZone)
         {
-            if(Input.GetKeyDown(KeyCode.X))
+            if(CrossPlatformInputManager.GetButtonDown("Oversize"))
             {
                 addSub = true;
                 Interact();
             }
-            else if(Input.GetKeyDown(KeyCode.Z))
+            else if(CrossPlatformInputManager.GetButtonDown("Undersize"))
             {
                 addSub = false;
                 Interact();

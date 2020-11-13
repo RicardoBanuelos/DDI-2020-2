@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Pickable : Interactable
 {
 
-    public KeyCode keyCode;
     public int id;
     public Inventory inventory;
 
@@ -21,7 +21,7 @@ public class Pickable : Interactable
 
     void Update()
     {
-        if(inZone && Input.GetKeyDown(keyCode))
+        if(inZone && CrossPlatformInputManager.GetButtonDown("Collect"))
             Interact();
     }
 }
