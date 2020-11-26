@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ARInteraction : MonoBehaviour
+public class Destroyable : MonoBehaviour
 {
+    // Update is called once per frame
     void OnMouseDown()
     {
-        Debug.Log("Rumm Rummm");
-        Destroy(this.gameObject);
+        Object.Destroy(this.gameObject);
     }
-    
 }
