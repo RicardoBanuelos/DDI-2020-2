@@ -5,7 +5,6 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Pickable : Interactable
 {
-
     public int id;
     public Inventory inventory;
 
